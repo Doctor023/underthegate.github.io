@@ -6,8 +6,10 @@
 Подключитесь консолью по ssh к серверу. А именно вбейте WIN + R, введите "cmd", откройте консоль, подключитесь к серверу командой ssh username@IPсервера
 Если пишет "Are you sure you want to continue connecting (yes/no/[fingerprint])?", просто введите yes
 Далее вводим
+'''
  apt update -y
  bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install
+ '''
 Создаем необходимые для конфига данные
  xray uuid
  xray x25519
