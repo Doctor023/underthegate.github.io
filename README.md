@@ -113,13 +113,17 @@ ctrl + X - выходим из документа
 
 12. Заполняем по форме
 
+<img width="816" height="559" alt="image" src="https://github.com/user-attachments/assets/306c8f04-5c47-4663-aa53-6b172e0c1ede" />
 
 Помните, что 1 профиль = одно подключение. Т.е. одновременно подключиться к нему может только 1 устройство, каждый профиль имеет уникальный UUID
 
 13. Чтобы включить VPN устанавливаем 2 галочки
+<img width="282" height="83" alt="image" src="https://github.com/user-attachments/assets/dcadf973-1302-4395-aa37-effc11bb3867" />
 
 
 ПКМ по строке подключения и запускаем
+
+<img width="447" height="339" alt="image" src="https://github.com/user-attachments/assets/e225cda6-2035-469b-ac8f-46f5a53bcb3f" />
 
 
 14. Проверяем на 2ip.ru получили ли мы иностранный IP адрес, если видим иностранный, значит VPN работает
