@@ -8,27 +8,30 @@
 
 2. Получите данные от ssh, это юзернейм (чаще всего root) и пароль
 
-Подключитесь консолью по ssh к серверу. А именно вбейте WIN + R, введите "cmd", откройте консоль, подключитесь к серверу командой ssh username@IPсервера
+3.Подключитесь консолью по ssh к серверу. А именно вбейте WIN + R, введите "cmd", откройте консоль, подключитесь к серверу командой ssh username@IPсервера
 Если пишет "Are you sure you want to continue connecting (yes/no/[fingerprint])?", просто введите yes
 
-Далее вводим
+4. Далее вводим
+```
  apt update -y
 
  bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install
-
-Создаем необходимые для конфига данные
+```
+5. Создаем необходимые для конфига данные
 ```
  xray uuid
  xray x25519
 ```
 
-
 uuid - это условный аккаунт
 xray x25519 - генерирует 2 ключа, приватный и публичный, просто запомним это
 
-Пишем
+6. Пишем
+```
 nano /usr/local/etc/xray/config.json
+```
 Вставляем туда
+```
 {
 "log": {
 "loglevel": "debug",
@@ -84,18 +87,22 @@ nano /usr/local/etc/xray/config.json
  }
  ]
  }
-
-ctrl + O, - сохраняем документ
+```
+7. ctrl + O, - сохраняем документ
 Enter - подтверждаем
 ctrl + X - выходим из документа
 
-Перезапускаем процесс
+8. Перезапускаем процесс
+```
  systemctl restart xray
+```
 
-Смотрим статус
+9. Смотрим статус программы
+```
  systemctl status xray
+```
 
-Если Active: active (running), значит все ок
+Если Active: `active (running)`, значит все ок
 
 Устанавливаем nekobox https://github.com/MatsuriDayo/nekoray/releases
 
@@ -122,7 +129,7 @@ ctrl + X - выходим из документа
 Допустим, нам нужно 3 точки подключения, генерируем 3 раза uuid командой xray uuid
 Меняем конфиг в nano /usr/local/etc/xray/config.json
 Меняем следующие значения:
-
+```
 "clients": [
 
 {
@@ -146,7 +153,13 @@ ctrl + X - выходим из документа
 "flow": "xtls-rprx-vision"
 
 } // тут запятой нет, т.к. это последний элемент
-
-После внесения изменений в конфиг обязательно перезагружаем xray командой systemctl restart xray
-Смотрим systemctl restart xray
-Если Active: active (running), значит все ок
+```
+После внесения изменений в конфиг обязательно перезагружаем xray командой 
+```
+systemctl restart xray
+```
+Смотрим 
+```
+systemctl restart xray
+```
+Если Active: `active (running)`, значит все ок
