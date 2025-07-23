@@ -170,6 +170,6 @@ systemctl restart xray
 ```
 Смотрим 
 ```
-systemctl restart xray
+systemctl status xray
 ```
 Если Active: `active (running)`, значит все ок
