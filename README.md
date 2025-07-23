@@ -107,6 +107,7 @@ ctrl + X - выходим из документа
 Устанавливаем nekobox https://github.com/MatsuriDayo/nekoray/releases
 
 Открываем nekobox, ПКМ по свободному полю и выбираем создать новый профиль
+
 <img width="332" height="335" alt="image" src="https://github.com/user-attachments/assets/0e960bb2-827d-4468-a5b5-b17c6f097220" />
 
 
